@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Account Deletion — Scath App</title>
+  <meta name="description" content="Information on how to delete your Scath app account and data." />
+  <link rel="icon" href="assets/icon.png" type="image/png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ══════════════════════ NAV ══════════════════════ -->
+<nav id="navbar">
+  <a href="index.html#hero" class="nav-logo">
+    <img src="assets/splash-icon.png" alt="Scath logo" />
+    <span>Scath</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#features">Features</a></li>
+    <li><a href="index.html#how">How It Works</a></li>
+    <li><a href="index.html#social">Reviews</a></li>
+    <li><a href="index.html#trust">Security</a></li>
+  </ul>
+  <a href="index.html#cta" class="nav-cta">Download App</a>
+  <div class="hamburger" id="hamburger" aria-label="Menu" role="button" tabindex="0">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobile-menu">
+  <a href="index.html#features">Features</a>
+  <a href="index.html#how">How It Works</a>
+  <a href="index.html#social">Reviews</a>
+  <a href="index.html#trust">Security</a>
+  <a href="index.html#cta" class="nav-cta">Download App</a>
+</div>
+
+<!-- ══════════════════════ PAGE HEADER ══════════════════════ -->
+<section class="page-header">
+  <div class="inner">
+    <h1>Account Deletion Process</h1>
+    <p>How we handle data removal and account deletion requests</p>
+  </div>
+</section>
+
+<!-- ══════════════════════ CONTENT ══════════════════════ -->
+<section class="legal-content">
+  <div class="inner">
+    <p>Scath provides a straightforward and secure way for users to delete their accounts and all associated data directly from within the application. This process ensures compliance with data protection standards and gives users full control over their information.</p>
+
+    <h2>1. The User Interface (UI)</h2>
+    <p>The account deletion option is located in the <strong>Verification / Personal Details screen</strong>.</p>
+    <ul>
+        <li>At the bottom of this screen, there is a "Delete Account" button outlined in red.</li>
+        <li>When the user taps this button, a <strong>Confirmation Modal</strong> appears. It warns the user: <em>"Are you sure you want to delete your account? All your data will be permanently removed."</em></li>
+        <li>The modal prevents accidental deletions by requiring the user to explicitly press "Delete" to confirm.</li>
+    </ul>
+
+    <h2>2. The Local State & Hooks</h2>
+    <p>Once the user confirms the action in the modal:</p>
+    <ul>
+        <li>The application handles the request securely using our internal state management.</li>
+        <li>The request is initiated safely, ensuring all local data states are prepared for deletion.</li>
+    </ul>
+
+    <h2>3. The API Service</h2>
+    <p>The application communicates with our secure servers to process the deletion:</p>
+    <ul>
+        <li>An authenticated <code>DELETE</code> HTTP request is sent to our backend services.</li>
+        <li>This request automatically includes your secure authentication token to verify your identity before any data is removed.</li>
+        <li>Our backend then permanently removes your account records and associated personal data from our active databases.</li>
+    </ul>
+
+    <h2>4. Post-Deletion Cleanup</h2>
+    <p>If the backend successfully processes the deletion:</p>
+    <ul>
+        <li>The application automatically clears all cached user data stored locally on your device.</li>
+        <li>You will be logged out of the application.</li>
+        <li>The UI hides the confirmation modal and displays a success notification confirming that your account has been deleted.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ══════════════════════ FOOTER ══════════════════════ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="assets/splash-icon.png" alt="Scath" />
+        <div class="brand-name">Scath</div>
+        <p>An app truly built for all. Powered by <strong style="color:rgba(255,255,255,0.7);">Safe Haven MFB</strong> — a CBN-licensed microfinance bank. Deposits insured by the NDIC.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Product</h4>
+        <a href="index.html#features">Features</a>
+        <a href="index.html#how">How It Works</a>
+        <a href="index.html#social">Reviews</a>
+        <a href="index.html#cta">Download</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="#">About Us</a>
+        <a href="#">Careers</a>
+        <a href="#">Blog</a>
+        <a href="#">Press</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="account-deletion.html">Account Deletion</a>
+        <a href="#">Support</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Scath. All rights reserved. Banking services provided by Safe Haven MFB — Licensed by the CBN.</p>
+      <div class="footer-social">
+        <a href="#" class="social-link" aria-label="Twitter">𝕏</a>
+        <a href="#" class="social-link" aria-label="Instagram">IG</a>
+        <a href="#" class="social-link" aria-label="LinkedIn">in</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
