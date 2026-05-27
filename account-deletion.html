@@ -37,48 +37,59 @@
 </div>
 
 <!-- ══════════════════════ PAGE HEADER ══════════════════════ -->
-<section class="page-header">
+<section class="page-header" style="padding-bottom: 120px;">
   <div class="inner">
-    <h1>Account Deletion Process</h1>
-    <p>How we handle data removal and account deletion requests</p>
+    <h1>Account Deletion</h1>
+    <p>We believe your data belongs to you. Here's how you can safely delete your Scath account.</p>
   </div>
 </section>
 
 <!-- ══════════════════════ CONTENT ══════════════════════ -->
-<section class="legal-content">
-  <div class="inner">
-    <p>Scath provides a straightforward and secure way for users to delete their accounts and all associated data directly from within the application. This process ensures compliance with data protection standards and gives users full control over their information.</p>
+<section class="legal-content" style="background: #f7f9fc; padding-top: 0;">
+  <div class="inner" style="max-width: 1000px; margin-top: -60px;">
+    
+    <div class="bento-grid">
+      
+      <!-- Step 1 -->
+      <div class="bcard half bg-white reveal">
+        <div class="bcard-icon" style="background:var(--faint-sky); color:var(--blue); font-size:2.2rem;">📱</div>
+        <div class="bcard-label">Step 1</div>
+        <h3>Request Deletion</h3>
+        <p>You can initiate the deletion of your account at any time through the Scath app. Simply navigate to your <strong>Profile</strong>, open the <strong>Verification / Personal Details</strong> screen, scroll to the bottom, and tap the red <strong>"Delete Account"</strong> button.</p>
+      </div>
 
-    <h2>1. The User Interface (UI)</h2>
-    <p>The account deletion option is located in the <strong>Verification / Personal Details screen</strong>.</p>
-    <ul>
-        <li>At the bottom of this screen, there is a "Delete Account" button outlined in red.</li>
-        <li>When the user taps this button, a <strong>Confirmation Modal</strong> appears. It warns the user: <em>"Are you sure you want to delete your account? All your data will be permanently removed."</em></li>
-        <li>The modal prevents accidental deletions by requiring the user to explicitly press "Delete" to confirm.</li>
-    </ul>
+      <!-- Step 2 -->
+      <div class="bcard half bg-white reveal reveal-delay-1">
+        <div class="bcard-icon" style="background:#fff0f0; color:#ff4d4d; font-size:2.2rem;">⚠️</div>
+        <div class="bcard-label" style="background:#fff0f0; color:#ff4d4d;">Step 2</div>
+        <h3>Confirm Your Choice</h3>
+        <p>To prevent accidental deletions, we require you to confirm your decision. A warning prompt will appear asking if you are sure. You must explicitly tap <strong>"Delete"</strong> again to confirm that you want all your data permanently removed.</p>
+      </div>
 
-    <h2>2. The Local State & Hooks</h2>
-    <p>Once the user confirms the action in the modal:</p>
-    <ul>
-        <li>The application handles the request securely using our internal state management.</li>
-        <li>The request is initiated safely, ensuring all local data states are prepared for deletion.</li>
-    </ul>
+      <!-- Step 3 -->
+      <div class="bcard half bg-white reveal reveal-delay-2">
+        <div class="bcard-icon" style="background:#f0f9ff; color:#0980FF; font-size:2.2rem;">🔒</div>
+        <div class="bcard-label" style="background:#f0f9ff; color:#0980FF;">Step 3</div>
+        <h3>Secure Data Removal</h3>
+        <p>Once confirmed, the app sends a secure, authenticated request to our servers to verify your identity. Our systems immediately begin the process of permanently erasing your account records, financial history, and personal data from our active databases.</p>
+      </div>
 
-    <h2>3. The API Service</h2>
-    <p>The application communicates with our secure servers to process the deletion:</p>
-    <ul>
-        <li>An authenticated <code>DELETE</code> HTTP request is sent to our backend services.</li>
-        <li>This request automatically includes your secure authentication token to verify your identity before any data is removed.</li>
-        <li>Our backend then permanently removes your account records and associated personal data from our active databases.</li>
-    </ul>
+      <!-- Step 4 -->
+      <div class="bcard half bg-white reveal reveal-delay-3">
+        <div class="bcard-icon" style="background:#f0fdf4; color:#2EBA64; font-size:2.2rem;">✨</div>
+        <div class="bcard-label" style="background:#f0fdf4; color:#2EBA64;">Step 4</div>
+        <h3>Complete & Clean</h3>
+        <p>When the deletion process is complete, all of your personal data stored locally on your device will be wiped clean. You will be automatically logged out of the Scath app, and a final notification will confirm that the process was successful.</p>
+      </div>
 
-    <h2>4. Post-Deletion Cleanup</h2>
-    <p>If the backend successfully processes the deletion:</p>
-    <ul>
-        <li>The application automatically clears all cached user data stored locally on your device.</li>
-        <li>You will be logged out of the application.</li>
-        <li>The UI hides the confirmation modal and displays a success notification confirming that your account has been deleted.</li>
-    </ul>
+    </div>
+
+    <div class="reveal reveal-delay-4" style="text-align:center; margin-top: 60px; padding: 40px; background: rgba(9,128,255,0.05); border-radius: 24px; border: 1px solid rgba(9,128,255,0.1);">
+      <h3 style="font-size:1.5rem; font-weight:700; color:var(--dark-blue); margin-bottom: 12px;">Need Help?</h3>
+      <p style="color:var(--gray); margin-bottom: 24px; font-size: 0.95rem;">If you're having trouble deleting your account or want to request manual data deletion, our support team is here to assist you.</p>
+      <a href="mailto:support@thescathgroup.online" class="nav-cta" style="display:inline-block;">Contact Support</a>
+    </div>
+
   </div>
 </section>
 
