@@ -84,7 +84,32 @@
 
     </div>
 
-    <div class="reveal reveal-delay-4" style="text-align:center; margin-top: 60px; padding: 40px; background: rgba(9,128,255,0.05); border-radius: 24px; border: 1px solid rgba(9,128,255,0.1);">
+    <div class="reveal reveal-delay-4" style="margin-top: 60px; padding: 40px; background: var(--white); border-radius: 24px; border: 1px solid #e6edf8; box-shadow: 0 10px 30px rgba(0,0,0,0.03);">
+      <h3 style="font-size:1.5rem; font-weight:800; color:var(--dark-blue); margin-bottom: 20px; letter-spacing:-0.3px;">What Data is Deleted or Kept?</h3>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px;">
+        <div>
+          <h4 style="font-size:1.1rem; font-weight:700; color:#ff4d4d; margin-bottom: 12px; display:flex; align-items:center; gap:8px;"><span style="font-size:1.4rem;">🗑️</span> Data Deleted Immediately</h4>
+          <p style="color:var(--gray); font-size:0.95rem; line-height:1.6;">Upon confirming account deletion, the following data is permanently erased from our active systems:</p>
+          <ul style="color:var(--gray); font-size:0.95rem; line-height:1.6; margin-top:12px; padding-left: 20px;">
+            <li style="margin-bottom:8px;">Your personal profile information (name, phone number, email)</li>
+            <li style="margin-bottom:8px;">Biometric login data and device identifiers</li>
+            <li style="margin-bottom:8px;">Saved payment methods, beneficiaries, and custom app settings</li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 style="font-size:1.1rem; font-weight:700; color:var(--blue); margin-bottom: 12px; display:flex; align-items:center; gap:8px;"><span style="font-size:1.4rem;">🛡️</span> Data Retained (Regulatory Compliance)</h4>
+          <p style="color:var(--gray); font-size:0.95rem; line-height:1.6;">As a financial service provider regulated by the CBN, we are legally required to retain specific records even after your account is deleted:</p>
+          <ul style="color:var(--gray); font-size:0.95rem; line-height:1.6; margin-top:12px; padding-left: 20px;">
+            <li style="margin-bottom:8px;"><strong>Transaction History & KYC Data:</strong> Securely retained for the legally mandated period (typically 5 years) for anti-money laundering (AML) and audit purposes.</li>
+            <li style="margin-bottom:8px;"><strong>Security & Support Logs:</strong> Retained for up to 24 months solely to prevent fraud, assist law enforcement, or resolve open disputes.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal" style="text-align:center; margin-top: 40px; padding: 40px; background: rgba(9,128,255,0.05); border-radius: 24px; border: 1px solid rgba(9,128,255,0.1);">
       <h3 style="font-size:1.5rem; font-weight:700; color:var(--dark-blue); margin-bottom: 12px;">Need Help?</h3>
       <p style="color:var(--gray); margin-bottom: 24px; font-size: 0.95rem;">If you're having trouble deleting your account or want to request manual data deletion, our support team is here to assist you.</p>
       <a href="mailto:support@thescathgroup.online" class="nav-cta" style="display:inline-block;">Contact Support</a>
